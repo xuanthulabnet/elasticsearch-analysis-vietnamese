@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--  (C) phuonglh@gmail.com -->
+<corpus id="resources/lexers/lexers.xml">
+    <body>
+        <w msd="phrase">[\p{IsLatin}\s]+(?=[`\!@#\$%\^&amp;\*\-_\+=\|\\\:;"',&lt;\.>\/\s~\.,\!\?\-\:;‘’“”"’'"\/\(\)\[\{\]\}]+|$)(?&lt;!(http|https|ftp))</w>
+        <w msd="allcaps">([\p{Lu}]+)([\p{Lu}\.])*[^\p{Ll}\)\W]</w>
+        <!--<w msd="name">([\p{Lu}][\p{L}]+)([\s+\-][\p{Lu}][\p{L}]+)*</w>-->
+        <w msd="email">(\w[\-\._\w]*\w@\w[\-\._\w]*\w\.\w{2,3})</w>
+        <w msd="date:dd-mm">(0*[1-9]|[12][0-9]|3[01])[\-/\.](1[012]|0*[1-9])</w>
+        <w msd="date:dd-mm-yy">([12][0-9]|3[01]|0*[1-9])[\-/\.](1[012]|0*[1-9])[\-/\.]\d\d</w>
+        <w msd="date:dd-mm-yyyy">([12][0-9]|3[01]|0*[1-9])[\-/\.](1[012]|0*[1-9])[\-/\.]\d{4}</w>
+        <w msd="date:mm-yy">(0*[1-9]|1[012])[\-/\.]\d\d</w>
+        <w msd="date:mm-yyyy">(0*[1-9]|1[012])[\-/\.]\d{4}</w>
+        <w msd="date:yyyy">\d{4}</w>
+        <w msd="date:yyyy-mm">\d{4}[\-/\.](0*[1-9]|1[012])</w>
+        <w msd="date:yyyy-mm-dd">\d{4}[\-/\.](0*[1-9]|1[012])[\-/\.](0*[1-9]|[12][0-9]|3[01])</w>
+        <w msd="hour">([0-1]\d|[2][0-3])\:[0-5]\d(\:[0-5]\d)?</w>
+        <w msd="number">[\+\-]?([0-9]*)?[0-9]+([\.,]\d+)*</w>
+        <w msd="order">(\d+[\.\)]?)(?!$)</w>
+        <w msd="percentage">([0-9]*[\.,])?[0-9]+%</w>
+        <w msd="degree">[-+]?([0-9]*[\.,])?[0-9]+°</w>
+        <w msd="fraction">(\d+)/(\d+)</w>
+        <w msd="unit">[\p{IsLatin}]+/[\p{IsLatin}]+</w>
+        <w msd="punctuation">[~\.,\!\?\-\:;‘’“”"’'"\/\(\)\[\{\]\}]+</w>
+        <w msd="space">\s+</w>
+        <w msd="special">[`\!@#\$%\^&amp;\*\-_\+=\|\\\:;"',&lt;\.>\/]+</w>
+        <w msd="foreign">([\p{L}]+)(\-[\p{L}]+)*</w>
+        <w msd="domain">\w[\-\w]*\w+(\.\w+)+</w>
+        <w msd="url">((http)|(https)|(ftp))\://\w[\-\w]*\w+(\.\w+)+(/[\w\-]+)*(\.\w+)?</w>
+        <w msd="other">[\W]</w>
+    </body>
+</corpus>
