@@ -61,3 +61,16 @@ Check this post: [How to build Elasticsearch Vietnamese Analysis Plugin](http://
     WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     License for the specific language governing permissions and limitations under
     the License.
+## How to build Elasticsearch Vietnamese Analysis Plugin
+
+```sh
+git clone git@github.com:xuanthulabnet/elasticsearch-analysis-vietnamese.git
+cd elasticsearch-analysis-vietnamese/vn-nlp-libraries/
+mvn install
+
+cd ..
+mvn package -DskipTests
+
+#Install
+bin/elasticsearch-plugin install file:target/releases elasticsearch-analysis-vietnamese-x.x.x.zip
+```
