@@ -36,7 +36,7 @@
         <lucene.version>6.6.1</lucene.version>
         <jna.version>4.1.0</jna.version>
         -->
-        <log4j.version>2.7</log4j.version>
+        <log4j.version>2.16.0</log4j.version>
     </properties>
     <dependencies>
         <dependency>
